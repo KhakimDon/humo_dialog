@@ -8,7 +8,7 @@ let getEventItem = dialogs.eventDialog(window.location.pathname.split('/')[2])
 
 
 onMounted(() => {
-    window.scrollBy(0, -100);
+    window.scrollTo(0,0);
     let left = document.querySelectorAll(".leftside")
     let counter = 0
     let start = 1000

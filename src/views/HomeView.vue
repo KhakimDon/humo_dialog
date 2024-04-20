@@ -24,7 +24,7 @@ import Footer from '../components/footer.vue';
             <div class="badge bg-[#33ACF1] text-white m text-[13px]">bepul</div>
           </div>
           <p class="m text-white font-[400] text-[16px]">Malakali pedagoglarimiz tomonidan tuzilgan Rus - Uzbek tilida
-            <u>60</u> ta har xil mavzudagi dialog.</p>
+            <u>30</u> ta har xil mavzudagi dialog.</p>
           <button @click="$router.push('/dialog')" class="btn mt-[10px] m border-[black] bg-[#24F8BE] border-[1px]">Ko'rish</button>
         </div>
 
