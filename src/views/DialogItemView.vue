@@ -110,7 +110,7 @@ onMounted(() => {
         class="sticky flex flex-col items-center justify-center bottom-0  bg-[#24F8BE] border-t-[2px] border-[black] px-[10px] pt-[5px] pb-[15px] w-[100%] ">
         <!-- <audio id="ref" type="audio/mpeg" src="../../public/audio/1.mp3"></audio> -->
         <p class="w-[100%] mb-[5px] text-left pr-[10px] m text-[12px]">{{ getEventItem.theme_ru }} / {{ getEventItem.theme }}</p>
-        <audioComp :source="`../../public/audio/${getEventItem.id}.mp3`" />
+        <audioComp :source="`/audio/${getEventItem.id}.mp3`" />
 
         <!-- <div @click="play()"
             class="border-[2px] border-[black] h-[40px] w-[40px] flex rounded-[50%] items-center justify-center">

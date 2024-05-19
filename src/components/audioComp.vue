@@ -15,6 +15,9 @@ export default {
   props:{
     source: String
   },
+  mounted(){
+    console.log(this.source);
+  }
 }
 </script>
 
