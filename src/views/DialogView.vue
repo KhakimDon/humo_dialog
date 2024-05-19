@@ -25,7 +25,7 @@ console.log(dialogs.dialogs);
 
          </div>
       </header>
-      <div class="px-[15px] pt-[70px]">
+      <div class="px-[15px] pt-[70px] pb-[100px]">
          <p class="mt-[20px] m font-[600] text-white">Mavzu:</p>
 
          <div @click="$router.push(`dialog/${item.id}`)" v-for="item of dialogs.dialogs" :key="item.id"

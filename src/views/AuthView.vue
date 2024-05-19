@@ -56,7 +56,7 @@ function error_404() {
                         <div class="mt-2">
                             <input id="login" :class="{ red: ERRROR }" v-model="login" placeholder="Loginni kiriting"
                                 name="login" type="text" autocomplete="login" required
-                                class="block pl-[10px] bg-[white] h-[50px] placeholder:font-[500] font-[1000] text-[20px] m w-full rounded-md border-0 py-1.5 text-gray-900  border-[2px] border-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                class="block pl-[10px] outline-none bg-[white] h-[50px] placeholder:font-[500] font-[1000] text-[20px] m w-full rounded-md border-0 py-1.5 text-gray-900  border-[2px] border-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@ function error_404() {
                         <div class="mt-2">
                             <input :class="{ red: ERRROR }" id="password" v-model="password" name="password"
                                 type="password" placeholder="Parolni kiriting" autocomplete="current-password" required
-                                class="block w-full bg-[white] border-[2px] border-black m pl-[10px] h-[50px] placeholder:font-[500]  font-[1000] text-[20px] rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                class="block outline-none w-full bg-[white] border-[2px] border-black m pl-[10px] h-[50px] placeholder:font-[500]  font-[1000] text-[20px] rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
 
@@ -79,7 +79,7 @@ function error_404() {
                     </div>
                 </form>
 
-                <div class="fixed bottom-0 left-0 p-[25px]">
+                <div class="w-[100%] p-[0px]">
                     <div class="bg-[#33ACF1] border-[2px] border-white mt-[40px] rounded-[10px]">
                         <p class="m text-white p-[10px] font-[600] text-center text-sm">
                             Agar login va paroliz bo'lmasa admin bilan bog'laning ! <a class="underline"

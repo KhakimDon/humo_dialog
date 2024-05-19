@@ -2,13 +2,17 @@
 import { onMounted, ref } from 'vue';
 import { useDialogStore } from '../stores/Dialog'
 import Footer from '../components/footer.vue';
+import audioComp from '../components/audioComp.vue';
 
 const dialogs = useDialogStore()
 let getEventItem = dialogs.eventDialog(window.location.pathname.split('/')[2])
 
 
+// const audio = ref(false)
+
+
 onMounted(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     let left = document.querySelectorAll(".leftside")
     let counter = 0
     let start = 1000
@@ -19,7 +23,7 @@ onMounted(() => {
     setTimeout(() => {
         let leftside = setInterval(() => {
             counter++
-        if (counter == left.length - 1) clearInterval(leftside)
+            if (counter == left.length - 1) clearInterval(leftside)
             left[counter].style.transform = 'translateX(0px)'
             left[counter].style.opacity = '1'
         }, start)
@@ -35,11 +39,25 @@ onMounted(() => {
             if (counter_r == right.length) clearInterval(rightside)
         }, 1000)
     }, 0);
-
-
-
 })
 
+
+// function play() {
+//     let audios = new Audio();
+//     audios.src = '../../public/audio/1.mp3';
+    
+//     if (audio.value) {
+//         document.querySelector("#ref").pause()
+//         audio.value = false
+//     } else {
+//         document.querySelector("#ref").play()
+//         audio.value = true
+
+//     }
+//     console.log(document.querySelector("#ref").audio.currentTime = 10 );
+    
+
+// }
 
 </script>
 
@@ -85,9 +103,42 @@ onMounted(() => {
             </div>
 
         </div>
+    </div>
+
+    <!-- player  -->
+    <div
+        class="sticky flex flex-col items-center justify-center bottom-0  bg-[#24F8BE] border-t-[2px] border-[black] px-[10px] pt-[5px] pb-[15px] w-[100%] ">
+        <!-- <audio id="ref" type="audio/mpeg" src="../../public/audio/1.mp3"></audio> -->
+        <p class="w-[100%] mb-[5px] text-left pr-[10px] m text-[12px]">{{ getEventItem.theme_ru }} / {{ getEventItem.theme }}</p>
+        <audioComp :source="`../../public/audio/${getEventItem.id}.mp3`" />
+
+        <!-- <div @click="play()"
+            class="border-[2px] border-[black] h-[40px] w-[40px] flex rounded-[50%] items-center justify-center">
+            <svg v-if="!audio" class="w-5 translate-x-[2px] h-5" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg v-if="audio" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+            </svg>
+
+        </div>
+
+        <div class="flex-col flex items-end flex-1 pl-[20px]">
+            <span class="m font-[400] text-[12px] self-start">{{ getEventItem.theme_ru }} / {{ getEventItem.theme
+                }}</span>
+            <progress class="progress my-[2px] w-[100%]" value="20" max="100"></progress>
+            <span class="m font-[500] text-[12px] ">02:21</span>
+        </div> -->
 
     </div>
-    <Footer/>
+
+    <div class="bg-[#24F8BE] px-[20px] text-center py-[10px]  m text-[10px]">
+        Audio "HUMO O'QUV MARKAZI" O'QITUVCHILARI TOMONIDAN YOZILGAN VA MUALLIFLIK HUQUQIGA EGA !
+    </div>
+
+    <Footer />
 </template>
 
 <style>
